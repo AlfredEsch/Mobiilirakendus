@@ -13,10 +13,12 @@ export const styles = StyleSheet.create({
     innerContainer: {
         backgroundColor: colors.grey,
         width: '100%',
-        height: '100%'
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     checkIcon: {
-        width: 12,
-        height: 9
+        width: 20,
+        height: 21
     }
 })
