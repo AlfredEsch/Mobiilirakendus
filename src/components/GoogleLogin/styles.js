@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { colors } from "../../utils/colors"
 
 export const styles = StyleSheet.create({
-    continer: {
+    container: {
         backgroundColor: colors.darkgrey,
         borderRadius: 14,
         width: "45%",
