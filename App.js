@@ -1,20 +1,27 @@
-import React { useEffect } from "react";
+import React, { useEffect } from "react";
 import {SafeAreaView} from "react-native"
-import Splash from "./src/screens/auth/Splash/Index";
-import Signup from "./src/screens/auth/Signup/Index";
-import { useEffect } from "react";
+import Signin from "./src/screens/auth/SignIn/Index";
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
-const WEB_CLIENT_ID = '740037864403-o4iouiofdugesvsl8a1bjipl3iekvk7o.apps.googleusercontent.com'
+
+const WEB_CLIENT_ID = '740037864403-i7vh1t15av5o9pcm2b39d0738r4ifqre.apps.googleusercontent.com'
 const IOS_CLIENT_ID = '740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1.apps.googleusercontent.com'
 const REVERSED_CLIENT_ID = 'com.googleusercontent.apps.740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1'
 
 const App = () => {
-  useEffect(() => {}, [])
+  useEffect(() => {
+    GoogleSignin.configure({
+      scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+      webClientId: WEB_CLIENT_ID,
+      offlineAccess: true,
+      iosClientId: IOS_CLIENT_ID,
+    })
+  }, [])
   return (
     <SafeAreaView>
-      <Signup />
+      <Signin/>
     </SafeAreaView>
   );
 };
 
-export default App
+export default  React.memo(App)

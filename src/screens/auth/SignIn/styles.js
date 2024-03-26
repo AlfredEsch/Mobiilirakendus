@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 import { colors } from "../../../utils/colors";
 
@@ -15,8 +15,10 @@ export const styles = StyleSheet.create({
         marginHorizontal: 14
     },
     agreeTextBold: {
-        color: colors.blue,
-        fontWeight: "bold"
+        fontWeight: 'bold'
+    },
+    button: {
+        marginVertical: 20
     },
     footerText: {
         color: colors.blue,
@@ -26,4 +28,4 @@ export const styles = StyleSheet.create({
     footerLink: {
         fontWeight: 'bold'
     }
-});
+})
