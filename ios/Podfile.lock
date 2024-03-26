@@ -87,7 +87,6 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 4.0, >= 1.5)
   - GTMSessionFetcher/Core (3.1.1)
-  - hermes-engine (0.70.15)
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
@@ -101,12 +100,6 @@ PODS:
     - DoubleConversion
     - fmt (~> 6.2.1)
     - glog
-  - RCT-Folly/Futures (2021.07.22.00):
-    - boost
-    - DoubleConversion
-    - fmt (~> 6.2.1)
-    - glog
-    - libevent
   - RCTRequired (0.70.15)
   - RCTTypeSafety (0.70.15):
     - FBLazyVector (= 0.70.15)
@@ -284,17 +277,6 @@ PODS:
     - React-logger (= 0.70.15)
     - React-perflogger (= 0.70.15)
     - React-runtimeexecutor (= 0.70.15)
-  - React-hermes (0.70.15):
-    - DoubleConversion
-    - glog
-    - hermes-engine
-    - RCT-Folly (= 2021.07.22.00)
-    - RCT-Folly/Futures (= 2021.07.22.00)
-    - React-cxxreact (= 0.70.15)
-    - React-jsi (= 0.70.15)
-    - React-jsiexecutor (= 0.70.15)
-    - React-jsinspector (= 0.70.15)
-    - React-perflogger (= 0.70.15)
   - React-jsi (0.70.15):
     - boost (= 1.76.0)
     - DoubleConversion
@@ -316,6 +298,8 @@ PODS:
   - React-jsinspector (0.70.15)
   - React-logger (0.70.15):
     - glog
+  - react-native-safe-area-context (4.9.0):
+    - React-Core
   - React-perflogger (0.70.15)
   - React-RCTActionSheet (0.70.15):
     - React-Core/RCTActionSheetHeaders (= 0.70.15)
@@ -385,6 +369,9 @@ PODS:
   - RNGoogleSignin (11.0.0):
     - GoogleSignIn (~> 7.0)
     - React-Core
+  - RNScreens (3.30.1):
+    - React-Core
+    - React-RCTImage
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -417,8 +404,6 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.125.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.125.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - hermes-engine (from `../node_modules/react-native/sdks/hermes/hermes-engine.podspec`)
-  - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -432,11 +417,11 @@ DEPENDENCIES:
   - React-Core/RCTWebSocket (from `../node_modules/react-native/`)
   - React-CoreModules (from `../node_modules/react-native/React/CoreModules`)
   - React-cxxreact (from `../node_modules/react-native/ReactCommon/cxxreact`)
-  - React-hermes (from `../node_modules/react-native/ReactCommon/hermes`)
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -450,6 +435,7 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNGoogleSignin (from `../node_modules/@react-native-google-signin/google-signin`)"
+  - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -485,8 +471,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
-  hermes-engine:
-    :podspec: "../node_modules/react-native/sdks/hermes/hermes-engine.podspec"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -507,8 +491,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/CoreModules"
   React-cxxreact:
     :path: "../node_modules/react-native/ReactCommon/cxxreact"
-  React-hermes:
-    :path: "../node_modules/react-native/ReactCommon/hermes"
   React-jsi:
     :path: "../node_modules/react-native/ReactCommon/jsi"
   React-jsiexecutor:
@@ -517,6 +499,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -543,6 +527,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNGoogleSignin:
     :path: "../node_modules/@react-native-google-signin/google-signin"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -567,7 +553,6 @@ SPEC CHECKSUMS:
   GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
   GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
-  hermes-engine: 2592781da1571e4375dfd897f9462638c2d0ceb9
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
@@ -580,11 +565,11 @@ SPEC CHECKSUMS:
   React-Core: 93efb81ef85fafee7f83f7ef6ecf546b2e1ee2c0
   React-CoreModules: 4eb535b1650b718cb3680767c1b9a1cacf649cbc
   React-cxxreact: 283248db3101de28d6cf0fe438a2dc95537ee472
-  React-hermes: 5439b771de0b04930c97888cc4c28852aa37389c
   React-jsi: 560bdf0bc36d5c137ac962c0eb4b60b50c304d77
   React-jsiexecutor: d2eebcd5a432f90be3baa5d1309f47d05478ea61
   React-jsinspector: bfedded1f4f562d29c2d4a8bb795c9a150a739e4
   React-logger: 31f198387a04172be49fe38e41a082560a81aeeb
+  react-native-safe-area-context: b97eb6f9e3b7f437806c2ce5983f479f8eb5de4b
   React-perflogger: 010e98d3335e5185a8f7496babca50d82a042e84
   React-RCTActionSheet: 0f585d684b540a5bbfc62b0a1fbc5292cff2aefc
   React-RCTAnimation: eb0e5b020333f9cc652d85f27a47086fbf56fffd
@@ -598,10 +583,11 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 04332dda2f2335ea4ddaf9255de069d3269f4e8b
   ReactCommon: 200471e0841cf2f7cde1fa2ef3d3c199ed970c07
   RNGoogleSignin: fc408799f1990a12497a32f64280c0fe353ffcc1
+  RNScreens: 848541d154d2a184131b34e468b10aa33008f357
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: d6134eb3d6e3675afc1d6d65ccb3169b60e21980
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: e4ef05cebf04bdd205a29e91fb725161c4525f14
+PODFILE CHECKSUM: ba975d77660ab2e0d63b010d018f8fc135a968a7
 
 COCOAPODS: 1.15.2
