@@ -17,13 +17,14 @@ import Profile from './src/screens/app/Profile/Index';
 import { colors } from "./src/utils/colors";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+
 const WEB_CLIENT_ID = '740037864403-i7vh1t15av5o9pcm2b39d0738r4ifqre.apps.googleusercontent.com'
 const IOS_CLIENT_ID = '740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1.apps.googleusercontent.com'
 const REVERSED_CLIENT_ID = 'com.googleusercontent.apps.740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1'
-
-const Stack = createNativeStackNavigator();
-
-const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
   return (

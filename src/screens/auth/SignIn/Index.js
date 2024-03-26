@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "react-native";
-import  styles  from "./styles";
+import { styles }  from "/Users/student/Mobiilirakendus/src/screens/auth/Signin/styles.js";
 import Button from '../../../components/Button/Index'
 import AuthHeader from "../../../components/AuthHeader/Index";
 import Input from "../../../components/Input/Index";
