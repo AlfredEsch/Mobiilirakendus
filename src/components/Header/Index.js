@@ -40,4 +40,4 @@ const Header = ({ title, onBackPress, onLogout, showBack, showSearch, showLogout
     );
 };
 
-export default React.memo(Header);
+export default Header;
