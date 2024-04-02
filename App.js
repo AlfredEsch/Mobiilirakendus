@@ -13,6 +13,7 @@ import Splash from "./src/screens/auth/Splash/Index";
 import Home from "./src/screens/app/Home/Index"
 import Favorites from './src/screens/app/Favorties/Index';
 import Profile from './src/screens/app/Profile/Index';
+import ProductDetails from "./src/screens/app/ProductDetails/Index";
 
 import { colors } from "./src/utils/colors";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -85,6 +86,7 @@ const App = () => {
               isSignedIn ? (
                 <>
                   <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}} />
+                  <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}} />
                 </>
               ) : (
                 <>
