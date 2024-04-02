@@ -14,6 +14,8 @@ import Home from "./src/screens/app/Home/Index"
 import Favorites from './src/screens/app/Favorties/Index';
 import Profile from './src/screens/app/Profile/Index';
 import ProductDetails from "./src/screens/app/ProductDetails/Index";
+import Settings from './src/screens/app/Settings/Index';
+import CreateListing from './src/screens/app/CreateListings/Index';
 
 import { colors } from "./src/utils/colors";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -26,6 +28,17 @@ const Tab = createBottomTabNavigator();
 const WEB_CLIENT_ID = '740037864403-i7vh1t15av5o9pcm2b39d0738r4ifqre.apps.googleusercontent.com'
 const IOS_CLIENT_ID = '740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1.apps.googleusercontent.com'
 const REVERSED_CLIENT_ID = 'com.googleusercontent.apps.740037864403-mggr1o8p7j8ld8ca814jdalhs8n3qvo1'
+
+const ProfileStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Profile" component={Profile} options={{headerShown: false}} />
+      <Stack.Screen name="Settings" component={Settings} options={{headerShown: false}} />
+      <Stack.Screen name="CreateListing" component={CreateListing} options={{headerShown: false}} />
+    </Stack.Navigator>
+  );
+};
+
 
 const Tabs = () => {
   return (
@@ -55,7 +68,7 @@ const Tabs = () => {
     })}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Favorites" component={Favorites} />
-      <Tab.Screen name="Profile" component={Profile} />
+      <Tab.Screen name="Profile" component={ProfileStack} />
     </Tab.Navigator>
   );
 }
